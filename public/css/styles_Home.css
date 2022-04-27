@@ -27,200 +27,39 @@
 
 
 
+
+/******************************* main *******************/
 main{
-width: 90%;
+width: 100%;
 margin: auto;
 }
 
-.carousel-container {
-    width:90vw;
-    height: 30vh;
-    margin: 10px auto;
-    position: relative;
-    
-  }
 
-
-
-  /* Imagenes carousel escondida por defecto */
-.mySlides {
-    width:90vw;
-    height: 30vh;
-    margin: auto;
-    display: none;
-    background-color:rgba(0, 0, 0, 0.65);
-    border-radius: 20px;
-    text-align: center;
-  }
-
-.mySlides img{
-    max-height: 85%;
+.home-img{
+  height:auto;
+  /* margin: auto; */
+  text-align:center;
+  position:relative;
 }
 
-  /* animacion*/
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
-    animation-name: fade;
-    animation-duration:2s;
-    animation-direction: alternate;
-}
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-
-.prev, .next {
-position: absolute;
-top: 50%;
-width: auto;
-margin-top: -20px;
-padding: 20px;
-cursor: pointer;
-color: white;
-font-size: 15px;
-/* font-weight: bold; */
-transition: 0.5s ease;
-border-radius: 0 5px 5px 0;
-/* user-select: none; */
+.home-img img{
+  width: 100vw;
+  height: auto;
 }
 
-
-/* "next button" a la derecha */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-
-.prev:hover, .next:hover {
-background-color: rgba(0,0,0,0.8);
+.home-main-text{  
+  position: absolute;
+  margin: auto;
+  top: 40%;
+  left:0;
+  right:0;
+  bottom:0;
+  font-size: 3rem;
+  text-align: center;
+  color:grey;
+  font-family:  Neue Haas Grotesk;
 }
-
-/* Caption text */
-.title-slide{
-    color: var(--menu-color);
-    font-size: 18px;
-    padding: 8px; 
-    position: absolute;
-    bottom: 2px;
-    width: 100%;
-    text-align: center;
-  }
-
-
-/* puntos indicadores */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-
-
-
-.discount, .destacados{
-    display: flex;  
-    flex-wrap: wrap;  
-    justify-content: center;
-    margin: auto;
-}
-
-.product-card{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    border: 3px solid;
-    border-color: rgba(100, 100, 100, 0.7);
-    border-radius: 5px;
-    margin: 20px 5px;
-    transition: transform 0.7s ease;
-    /* border-width: 5px; */
-}
-
-
-.product-card:hover{
-    transform: scale(1.05);
-}
-
-
-.product-card img{
-    width: 100%;
-    height: auto;
-}
-
-.product-card article{
-    display: flex;
-    flex-direction: column;
-    
-    text-align: center;
-}
-
-.body-card{
-display: flex;
-justify-content: space-between;
-margin-bottom: 10px;
-}
-
-.title-card{
-    font-size: 1.4rem;
-    margin-left: 5px;
-}
-
-.price-card{
-    font-size: 1.4rem;
-    margin-right: 5px;
-}
-
-.desc-card{
-    font-size:1.2rem;
-    text-align: center;
-    padding: 5px;
-}
-
-
-.add-card{
-    width:60%;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.add-card-btn{
-    font-size: 1.5rem;
-    border-radius: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.add-card-btn p{
-    display: none;
-}
-
-
-input:invalid {
-    border: 2px solid red;
-    border-radius: 5px;
-  }
-
-
-/* Fin parte central */
+/******************************* footer *******************/
 
 
 
@@ -230,13 +69,17 @@ input:invalid {
 @media (min-width:600px){
 /******************** header *********************/
 /******************** main *********************/
-.product-card{
-    width: 40%;
+.home-img{
+  width: 100vw;
+  height: auto;
 }
 
 
-/******************** footer *********************/
+.home-main-text{  
+  font-size: 5rem;
+}
 
+/******************** footer *********************/
 }
 
 /******* Desktop   ***************/
@@ -244,10 +87,6 @@ input:invalid {
 @media (min-width:961px){
 /******************** header *********************/
 /******************** main *********************/
-.product-card{
-    width: 22%;
-}
-
 /******************** footer *********************/
 
 }
