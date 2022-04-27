@@ -33,9 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("/images/3880-gris-oscuro.jpg");
-  background-repeat: repeat;
-
   color: white;
   /* color:    rgb(55, 53, 51); */
 }
@@ -83,16 +80,29 @@ nav hr {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  background-color: var(--menu-color);
-  height: 8vh;
+  justify-content: flex-end;
+  height: 10vh;
   font-size: 1.2rem;
   align-items: center;
+  /* border-width: 2em;
+  border-style: solid; */
+  padding-bottom:7px;
+  background:
+    linear-gradient(
+      to right, 
+      white 0%,
+      rgba(255,93,177,1) 100%
+    )
+    left 
+    bottom
+       
+    no-repeat; 
+  background-size:100% 5px ;  
 }
 
 .item {
   margin-top: 5px;
-  width: 100%;
+  width: 15%;
   text-align: center;
   flex-grow: 0;
 }
@@ -110,7 +120,7 @@ nav hr {
   border-radius: 5px;
   background-color: white;
   font-size: 1.2rem;
-  width: 40%vw;
+  width: 40vw;
   margin-right: 5px;
 }
 
@@ -162,12 +172,12 @@ nav hr {
 /************ Menu lateral Fullscreen ************/
 .panel-categorias {
   /*
-    Haciendo position : fixed y seteando top bottom left right ESTIRO el panel, ocupando .
-    incluso header y footer. 
-    - sin declarar position, y haciendo height : 100vh, width:100vw no cubro header y footer. 
-    width: 100vw;
-    height: 100vh; 
-    */
+  Haciendo position : fixed y seteando top bottom left right ESTIRO el panel, ocupando .
+  incluso header y footer. 
+  - sin declarar position, y haciendo height : 100vh, width:100vw no cubro header y footer. 
+  width: 100vw;
+  height: 100vh; 
+  */
   position: fixed;
   top: 0;
   left: 0;
@@ -247,11 +257,6 @@ nav hr {
   /* border:2px; */
 }
 
-.presentacion {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
 
 .botones {
   display: flex;
@@ -309,17 +314,8 @@ footer {
 
 .add-link {
   text-decoration: none;
-  color: var(--font-color--dark-gray);
 }
 
-.baja-newsletter {
-  width: 50%;
-  border-radius: 5px;
-  background-color: rgb(247, 44, 44);
-  /* background-image: url('/images/3880-gris-oscuro.jpg'); */
-  color: white;
-  font-size: 1.2rem;
-}
 
 .redes {
   display: flex;

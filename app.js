@@ -19,25 +19,19 @@ const apiRoutes = require('./routers/api')
 // middleware a nivel aplicacion
 const { isUserLoggedMiddleware } = require('./middlewares/isUserLoggedMiddleware');
 
-
 const app = express();
 
 // PORT
 const port=process.env.PORT || 3001;
 
-
 // Ejs
 app.set('view engine', 'ejs')
-
-
-
 
 // carpeta publica.
 const publicPath = path.resolve(__dirname, 'public');
 app.use(express.static(publicPath))
 
 app.use(cors())
-
 
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: false })); // to support URL-encoded bodies
@@ -65,31 +59,12 @@ app.get('/', (req,res)=>{
     res.render( path.resolve(__dirname,'views/Home'));
 })
 
-
 // Error 404
 app.use((req, res, next) => {
     res.render(path.resolve(__dirname ,'views/error404') );
     next();
     
 })
-
-// app.get('/carrito', (req,res)=>{
-//     res.render(path.resolve(__dirname ,'views/products/ProductCart'));
-// });
-
-// app.get('/detalles', (req,res)=>{
-//     res.render(path.resolve(__dirname ,'views/products/ProductDetail'));
-// });
-
-// app.get('/login', (req,res)=>{
-//     res.render(path.resolve(__dirname ,'views/users/Login_prov'));
-// });
-
-
-// app.get('/register', (req,res)=>{
-//     res.render(path.resolve(__dirname ,'views/users/Register_prov'));
-// });
-
 
 app.listen(port, ()=>{
     console.log(` Servidor activado en el puerto ${port}`)
