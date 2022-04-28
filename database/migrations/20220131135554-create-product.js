@@ -35,13 +35,21 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
-
-
       idCategory: {
         type: Sequelize.INTEGER,
         allowNull:false,
         references:{
           model: 'category',
+          key: "id"
+        },
+        onDelete: 'CASCADE',
+        onUpdate: "CASCADE"
+      },
+      idArtist: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model: 'artist',
           key: "id"
         },
         onDelete: 'CASCADE',
