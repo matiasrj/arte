@@ -16,7 +16,7 @@ const validarCampos = (req=request,res=response,next)=>{
                 console.log(error)
         //     if (error.msg.includes('login') ){         
                                                          
-        //                             return res.render(path.join(__dirname ,'../views/users/Login_prov'), { data :
+        //                             return res.render(path.join(__dirname ,'../views/users/login'), { data :
         //                                     {
         //                                         status: 400, 
         //                                         error : {

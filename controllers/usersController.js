@@ -11,7 +11,7 @@ const userController = {
 
     
     login : (req=request, res= response)=> {
-        res.render(path.resolve(__dirname ,'../views/users/Login_prov'),{errors : null});
+        res.render(path.resolve(__dirname ,'../views/users/login'),{errors : null});
     },
 
     processLogin : async (req=request, res= response) => {
@@ -28,7 +28,7 @@ const userController = {
         if ( !errors.isEmpty() ){
             errors_msg = errors.mapped()
             console.log(errors_msg)
-            return res.render(path.join(__dirname ,'../views/users/Login_prov'), { errors : errors_msg,old : req.body
+            return res.render(path.join(__dirname ,'../views/users/login'), { errors : errors_msg,old : req.body
             });  
         }
 
