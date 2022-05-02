@@ -91,7 +91,7 @@ const userController = {
             // errors_msg = JSON.stringify(errors_msg)
             // console_log(errors_msg)
             let user = await db.User.findOne({where : {id:idUser}});
-            return res.render(path.join(__dirname ,'../views/users/Register_prov'), { usuario:user, errors : errors_msg,old : req.body
+            return res.render(path.join(__dirname ,'../views/users/register'), { usuario:user, errors : errors_msg,old : req.body
             });  
         }
 
@@ -142,7 +142,7 @@ const userController = {
     },
     
     register: (req=request, res= response)=> {
-        res.render(path.resolve(__dirname ,'../views/users/Register_prov'), {errors : null});
+        res.render(path.resolve(__dirname ,'../views/users/register'), {errors : null});
     },
 
 
@@ -166,7 +166,7 @@ const userController = {
             console.log(errors_msg)
             // errors_msg = JSON.stringify(errors_msg)
             // console_log(errors_msg)
-            return res.render(path.join(__dirname ,'../views/users/Register_prov'), { errors : errors_msg,old : req.body
+            return res.render(path.join(__dirname ,'../views/users/register'), { errors : errors_msg,old : req.body
             });  
         }
 

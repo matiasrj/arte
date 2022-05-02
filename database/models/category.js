@@ -1,12 +1,10 @@
-
 'use strict';
-const UserModel = require('User')
-
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
-  class Category extends UserModel {
+  class Category extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.

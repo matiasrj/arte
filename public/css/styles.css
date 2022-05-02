@@ -50,6 +50,16 @@ nav hr {
   flex-direction: row;
   justify-content: center;
   padding: 10px;
+  color: var(--font-color--dark-gray);
+  background:linear-gradient(
+    135deg,
+    white 0%,
+     rgb(255,93,177,1)  89%
+  )
+  left 
+  bottom
+  no-repeat; 
+
   /* align-items: center; */
 }
 
@@ -216,7 +226,14 @@ footer {
   padding: 5px;
   padding-bottom: var(--menu-mobile-height); /* Es la medida del menu-mobile*/
   order: 1;
-  background-color: var(--footer-color);
+  background:linear-gradient(
+    135deg,
+    white 0%,
+    var(--footer-color) 40%
+  )
+  left 
+  bottom
+  no-repeat; 
   color: white;
   margin-top: auto;
 }
