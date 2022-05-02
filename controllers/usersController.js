@@ -148,8 +148,9 @@ const userController = {
 
     processRegister : async (req=request, res= response)=> {
         const  {
-            nombreApe, 
-            nombreUsuario,
+            nombre,
+            apellido, 
+            username,
             fechaNac,
             Adress,
             email,
@@ -163,7 +164,6 @@ const userController = {
         const errors = validationResult(req);
         if ( !errors.isEmpty() ){
             errors_msg = errors.mapped()
-            console.log(errors_msg)
             // errors_msg = JSON.stringify(errors_msg)
             // console_log(errors_msg)
             return res.render(path.join(__dirname ,'../views/users/register'), { errors : errors_msg,old : req.body
@@ -176,8 +176,9 @@ const userController = {
         const passwordHash = bcryptjs.hashSync (password, salt);
 
         const user = {
-            nombreApe, 
-            nombreUsuario,
+            nombre,
+            apellido,
+            username,
             fechaNac,
             Adress,
             email,
@@ -187,8 +188,9 @@ const userController = {
         }
          
         await db.User.create({
-            firstName: user.nombreUsuario,
-            lastName: user.nombreApe,
+            firstName: user.nombre,
+            lastName: user.apellido,
+            userName: user.username,
             email : user.email,
             password : user.password,
             avatar : user.avatar,

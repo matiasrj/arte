@@ -49,8 +49,11 @@ const validateLogin = [
 
 //
 const registerUserMiddleware = [
-    check('nombreApe').exists().withMessage('"Nombre y Apellido" es obligatorio').bail()
-    .isLength({ min: 2}).withMessage('tipo de dato "Nombre y Apellido" incorrecto'),
+    check('nombre').exists().withMessage('"Nombre " es obligatorio').bail()
+    .isLength({ min: 2}).withMessage('tipo de dato "Nombre" incorrecto'),
+
+    check('apellido').exists().withMessage('"Apellido " es obligatorio').bail()
+    .isLength({ min: 2}).withMessage('tipo de dato "Apellido" incorrecto'),
 
     check('email').exists().withMessage('"email" es obligatorio').bail()
     .isEmail().withMessage('"email" no valido').bail()
@@ -67,8 +70,11 @@ const registerUserMiddleware = [
 ]
 
 const registerUpdateUserMiddleware = [
-    check('nombreApe').exists().withMessage('"Nombre y Apellido" es obligatorio').bail()
-    .isLength({ min: 2}).withMessage('tipo de dato "Nombre y Apellido" incorrecto'),
+    check('nombre').exists().withMessage('"Nombre " es obligatorio').bail()
+    .isLength({ min: 2}).withMessage('tipo de dato "Nombre" incorrecto'),
+
+    check('apellido').exists().withMessage('"Apellido " es obligatorio').bail()
+    .isLength({ min: 2}).withMessage('tipo de dato "Apellido" incorrecto'),
 
     check('email').exists().withMessage('"email" es obligatorio').bail()
     .isEmail().withMessage('"email" no valido').bail(),
