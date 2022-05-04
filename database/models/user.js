@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'Order'
       }),
 
-      this.hasOne ( models.artist, {
+      this.hasOne ( models.Artist, {
         foreignKey: 'id',
         as: 'Artist'
       })
