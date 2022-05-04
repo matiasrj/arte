@@ -17,7 +17,7 @@ router.get('/users/:id', usersApiController.detail);
 
 
 // API Categories
-router.get('/category', categoryApiController.list);
-router.get('/category/:id', categoryApiController.detail);
+// router.get('/category', categoryApiController.list);
+// router.get('/category/:id', categoryApiController.detail);
 
 module.exports = router;

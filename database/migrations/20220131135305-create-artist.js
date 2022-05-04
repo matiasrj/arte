@@ -1,13 +1,13 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('artist', {
+    await queryInterface.createTable('Artist', {
       id: {
         type: Sequelize.INTEGER,
         allowNull:false,
         unique: true,
         references:{
-          model: 'user',
+          model: 'User',
           key: "id"
         },
         onDelete: 'CASCADE',
@@ -27,6 +27,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('artist');
+    await queryInterface.dropTable('Artist');
   }
 };

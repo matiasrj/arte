@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     return queryInterface.bulkInsert('artist', [{
+     return queryInterface.bulkInsert('Artist', [{
       id: 1,
       description: 'Nieta',
       createdAt: '2022-03-10 15:27:41.754 -0300',
@@ -34,6 +34,6 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
     
-     return queryInterface.bulkDelete('artist', null, {});
+     return queryInterface.bulkDelete('Artist', null, {});
   }
 };

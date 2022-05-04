@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     return queryInterface.bulkInsert('category', [{
+     return queryInterface.bulkInsert('Category', [{
       name: 'Acrilicos',
       createdAt: '2022-03-10 15:27:41.754 -0300',
       updatedAt: '2022-03-10 15:27:41.754 -0300'
@@ -31,6 +31,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-     return queryInterface.bulkDelete('category', null, {});
+     return queryInterface.bulkDelete('Category', null, {});
   }
 };

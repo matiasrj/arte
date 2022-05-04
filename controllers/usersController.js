@@ -186,6 +186,8 @@ const userController = {
             avatar : req.file.filename,
             passwordtest : password,
         }
+
+        console.log(user)
          
         await db.User.create({
             firstName: user.nombre,

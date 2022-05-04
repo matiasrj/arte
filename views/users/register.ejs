@@ -32,7 +32,13 @@
         <%if (errors) {%>
             <p> Hubo errores al intentar dar de alta los campos.</p> 
             <% for (error in errors)  {%>
-                <p>   <%- errors[error].msg %></p> 
+                <p>   <%- errors[error].msg    %></p>
+                
+                <p>   <%- errors[error].param    %></p> 
+                
+                <p>   <%- errors[error].value   %></p> 
+                
+                <p>   <%- errors[error].location    %></p> 
             <%}%>
         <%}%>
 
